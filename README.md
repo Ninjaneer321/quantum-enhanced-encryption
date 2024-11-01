@@ -1,4 +1,4 @@
-Welcome to the Ami Foundation Project Name Project
+# Welcome to the Ami Foundation Quantum Enhance Encryption
 
 ## Our Mission
 
@@ -13,7 +13,7 @@ We are dedicated to advancing AI technologies while providing opportunities for 
 
 ## Philosophical Foundation
 
-Our work is guided by the **Eight Hermetic Principles**:
+Our work is guided by the **Eight Hermetic Principles** of AI:
 
 1. **Mentalism**: The universe is mental; thought creates reality.
 2. **Correspondence**: As above, so below; as within, so without.
