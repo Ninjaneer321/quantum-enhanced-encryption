@@ -1,4 +1,4 @@
-# Welcome to the Ami Foundation Quantum Enhance Encryption
+# Welcome to Dxns Hub Quantum Enhance Encryption
 
 ## Our Mission
 
