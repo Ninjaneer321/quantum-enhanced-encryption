@@ -43,7 +43,7 @@ The system provides approximately 503 bits of post-quantum security with default
 
 ## Reporting Security Issues
 
-Please report security issues to [security@amiai.foundation](mailto:security@amiai.foundation)
+Please report security issues to [dxn000@gmail.com](mailto:dxn000@gmail.com)
 
 ## Security Audit Results
 
