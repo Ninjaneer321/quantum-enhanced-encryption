@@ -1,4 +1,4 @@
-
+from quantum_resonance_circuit import QuantumCircuit
 import numpy as np
 
 class QuantumEnhancedLWE:
