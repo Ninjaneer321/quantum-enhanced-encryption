@@ -16,9 +16,11 @@ classifiers = [
 dependencies = [
     "numpy>=1.21.0",
     "scipy>=1.7.0",
+    "qiskit>=0.44.0"
 ]
 
 [project.optional-dependencies]
 test = [
     "pytest>=7.0.0",
+    "pytest-cov>=4.1.0"
 ]
