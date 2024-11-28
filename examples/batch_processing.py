@@ -1,5 +1,5 @@
 
-from quantum_enhanced_lwe import EnhancedQuantumLWE
+from src.quantum_enhanced_lwe.core.quantum_enhanced_lwe import EnhancedQuantumLWE
 import numpy as np
 
 def batch_encryption_example():

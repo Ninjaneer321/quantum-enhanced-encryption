@@ -1,5 +1,5 @@
 
-from quantum_enhanced_lwe import EnhancedQuantumLWE
+from src.quantum_enhanced_lwe.core.quantum_enhanced_lwe import EnhancedQuantumLWE
 
 def basic_encryption_example():
     # Initialize the system
