@@ -1,6 +1,6 @@
 import pytest
 import numpy as np
-from ..src.core.quantum_enhanced_lwe import QuantumEnhancedLWE # type: ignore
+from quantum_enhanced_lwe import QuantumEnhancedLWE # type: ignore
 
 @pytest.fixture
 def lwe():
