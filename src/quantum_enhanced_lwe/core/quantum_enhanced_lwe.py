@@ -1,4 +1,4 @@
-from quantum_resonance_circuit import QuantumCircuit
+from .quantum_resonance_circuit import QuantumResonanceCircuit
 import numpy as np
 
 class QuantumEnhancedLWE:
@@ -12,6 +12,44 @@ class QuantumEnhancedLWE:
         self.n = n
         self.q = q
         self.sigma = sigma
+        self.quantum_circuit = QuantumResonanceCircuit()  # Initialize quantum circuit
+
+    def quantum_enhanced_encrypt(self, pk, m):
+        """
+        Encrypt a message using quantum-enhanced techniques.
+        :param pk: Public key
+        :param m: Message to encrypt (0 or 1)
+        :return: Ciphertext as a tuple of (a, c)
+        """
+        # Initialize quantum circuit state
+        q_state = self.quantum_circuit.initialize_state()
+        
+        # Evolve quantum state
+        evolved_state = self.quantum_circuit.evolve_state(q_state, 1e-9)
+        
+        # Calculate quantum noise from evolved state
+        quantum_noise = np.abs(evolved_state[0])
+        
+        # Create entangled circuit for additional randomness
+        entangled_circuit = self.quantum_circuit.create_entangled_circuit()
+        
+        # Standard LWE encryption with quantum enhancement
+        a = self.sample_uniform(self.n)
+        e = self.sample_error(1)[0]
+        
+        # Add quantum noise to error term
+        e = (e + int(quantum_noise * self.q)) % self.q
+        
+        # Calculate total quantum possibilities
+        quantum_factor = self.quantum_circuit.get_total_possibilities()
+        
+        # Apply quantum factor to error term
+        e = (e + int(quantum_factor)) % self.q
+        
+        b = (np.dot(a, pk[0]) + e) % self.q
+        c = (b + m * (self.q // 4)) % self.q
+        
+        return a, c
 
     def gen_keypair(self):
         """
